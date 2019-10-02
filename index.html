@@ -1,0 +1,225 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Personal Notes</title>
+
+ 		<link rel="icon" type="image/x-icon" href="css/gt-logo-gold.png">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/print/print.css">
+        <link rel="stylesheet" href="css/CRAWLAB.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src="js/reveal.js"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <section> <!-- Title Slide -->
+                    <br>
+                    <br>
+                    <h2 style="text-align:center;">Dissertation Proposal Presentation</h2>
+                    <p style="text-align: center;">
+					<br>
+					<h2 style="text-align:center;">October 29th 2019</h2>
+                    Daniel Newman<br>    
+                    Department of Mechanical Engineering<br>
+                    Georia Institute of Technology<br>
+                    <a href="mailto:danielnewman@gatech.edu" title="Email">danielnewman@gatech.edu</a><br>
+                 </p>
+                </section>
+
+				<section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+	
+                </section>
+
+				<!-- <section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2 style="margin-top:-25px;margin-bottom:0;">Outline</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+						<div style="font-size: 1.0em">
+							<ul style="line-height:2.0;">
+								<li class="fragment fade-up">Input Shaping Background</li>
+
+								<li class="fragment fade-up">Dynamic Model</li>
+								<ul>
+									<li class="fragment fade-up">Discrete Approximation
+									</li>
+									<li class="fragment fade-up">Linearization</li>
+									<li class="fragment fade-up">Modal Analysis</li>
+								</ul>
+
+								<li class="fragment fade-up">Concurrent Design Approach</li>
+								<li class="fragment fade-up">Simulated Results</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+</section> -->
+
+
+
+				<section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Genos X Coordinate Model</h2>
+                    <span class="fragment" data-fragment-index="0"></span>
+
+                    <div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
+                        $$
+                        \ddot{x} = \frac{1}{m} \left ( -F_g - \beta_x \dot{x} + B_{x} u_{x} + F_{x} \right )
+                        $$
+                    </div>
+                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,50%);height:80%;width:100%;font-size: 1.0em">
+                        <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
+                            <li class="fragment fade-up"><p>$m$ - Mass of the turret</p></li>
+                            <li class="fragment fade-up"><p>$F_{g}$ - Force induced by gravity</p></li>
+                            <li class="fragment fade-up"><p>$\beta_{x}$ - Drag coefficient</p></li>                            
+                            <li class="fragment fade-up"><p>$B_{x}$ - Converts input (Current) to Force</p></li>
+                            <li class="fragment fade-up"><p>$u_{x}$ - Current input to the spindle motor</p></li>
+                            <li class="fragment fade-up"><p>$F_{x}$ - Cutting force in the radial direction</p></li>
+                        </ul>
+                    </div>	
+                </section>
+
+				<section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Genos Z Coordinate Model</h2>
+                    <span class="fragment" data-fragment-index="0"></span>
+
+                    <div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
+                        $$
+                        \ddot{z} = \frac{1}{m} \left ( -\beta_z \dot{z} +  B_{z} u_{z} + F_{z} \right )
+                        $$
+                    </div>
+                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,50%);height:80%;width:100%;font-size: 1.0em">
+                        <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
+                            <li class="fragment fade-up"><p>$m$ - Mass of the turret</p></li>
+                            <li class="fragment fade-up"><p>$\beta_{z}$ - Drag coefficient</p></li>
+                            <li class="fragment fade-up"><p>$B_{z}$ - Converts input (Current) to Force</p></li>
+                            <li class="fragment fade-up"><p>$u_{z}$ - Current input to the spindle motor</p></li>
+                            <li class="fragment fade-up"><p>$F_{z}$ - Cutting force in the axial direction</p></li>
+                        </ul>
+                    </div>	
+                </section>
+   
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">System Comparison</h2>
+                    <div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/Motor-Pump/Base.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                        <span class="fragment fade-in"><img class="plain fragment fade-out" src="figures/Motor-Pump/Pump-Layer.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%"></span>
+                        <img class="plain fragment fade-in" src="figures/Motor-Pump/Spindle-Layer.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                    </div>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">System Block Diagram</h2>
+                    <div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
+                        <img src="figures/Motor-Pump-BlockDiag.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                    </div>
+                    <div style="position:absolute;left:0px;top:50%;">
+                        <ul>
+                            <li class="fragment fade-up">$R$ - Reference given by user input</li>
+							<li class="fragment fade-up">$C$ - Controller which gives known output $U$</li>
+							<li class="fragment fade-up">$M,P,S$ - Unknown Plant (Motor, Pulley, Spindle)</li>
+                            <li class="fragment fade-up">$D$ - External disturbance due to cutting</li>
+                            <li class="fragment fade-up">$Y$ - Measured Output (Spindle Speed)</li>
+                        </ul>
+
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                    <h2 style="margin-top:-25px;margin-bottom:0;">System Identification</h2>
+                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);height:80%;width:100%;font-size: 1.0em">
+                            <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
+                                <li class="fragment fade-up"><p>To get a model of this system, we would need to determine what the unknown plant transfer function is.</p></li>
+                                <li class="fragment fade-up"><p>We have some basic bounds on this system that can provide a first guess.</p></li>
+                                <li class="fragment fade-up"><p>We could use the tool location during cutting to help with an approximation for the external disturbance function (Torque is proportional to the distance from the axis of rotation).</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+			</div>
+		</div>
+
+        <script src="lib/js/head.min.js"></script>
+        
+        <!-- Try to get jQuery from CDN, if not fall back to local version -->
+        <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.8.0.min.js"><\/script>')</script>
+        
+        <!-- Try to get jQuery UI from CDN, if not fall back to local version -->
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: false,
+                
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: true,
+
+                //transition: 'none', // none/fade/slide/convex/concave/zoom
+                
+                // The "normal" size of the presentation, aspect ratio will be preserved
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                width: 1280,
+                height: 960,
+
+                // Factor of the display size that should remain empty around the content
+                margin: 0.0,
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.2,
+                maxScale: 1.5,
+
+                slideNumber: 'c/t',
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener( 'centerText', function() {
+			    Reveal.configure({center: true});
+			}, false );
+        </script>
+        
+	</body>
+</html>
