@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Personal Notes</title>
+		<title>Proposal Presentation</title>
 
  		<link rel="icon" type="image/x-icon" href="css/gt-logo-gold.png">
 
@@ -36,10 +36,10 @@
 		<div class="reveal">
 			<div class="slides">
 
-                <section> <!-- Title Slide -->
+                <section data-background="#ffffff"> <!-- Title Slide -->
                     <br>
                     <br>
-                    <h2 style="text-align:center;">Dissertation Proposal Presentation</h2>
+                    <h2 style="text-align:center;">Bayesian Edge Analytics of Manufacturing Process and Health Status in an IoT Framework</h2>
                     <p style="text-align: center;">
 					<br>
 					<h2 style="text-align:center;">October 29th 2019</h2>
@@ -51,17 +51,26 @@
                 </section>
 
 				<section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
                     <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+                    <div style="position: absolute; top: 95%; width: 40%; left: -15%; padding: 2px; text-align: left;">
+                    <h4>Motivation</h4>
+                    </div>
+                    </div>
 	
                 </section>
 
-				<!-- <section>
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Central Thesis</h2>
+                </section>
+
+				<section>
 					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
 					<h2 style="margin-top:-25px;margin-bottom:0;">Outline</h2>
 					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
 						<div style="font-size: 1.0em">
 							<ul style="line-height:2.0;">
-								<li class="fragment fade-up">Input Shaping Background</li>
+								<!-- <li class="fragment fade-up">Input Shaping Background</li>
 
 								<li class="fragment fade-up">Dynamic Model</li>
 								<ul>
@@ -72,13 +81,43 @@
 								</ul>
 
 								<li class="fragment fade-up">Concurrent Design Approach</li>
-								<li class="fragment fade-up">Simulated Results</li>
+								<li class="fragment fade-up">Simulated Results</li> -->
 							</ul>
 						</div>
 					</div>
 				</div>
-</section> -->
+                </section>
 
+                <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                                <h2 style="margin-top:-25px;margin-bottom:0;">IoT Frameworks</h2>
+                                <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%">
+                                <div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;">
+                                
+                                <h3>Background</h3>
+                                </div>
+                        </div>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Background: Wireless Sensor Devices</h2>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Background: Machine Monitoring</h2>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Research Opportunities</h2>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Proposed Activities</h2>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Work Accomplished</h2>
+                </section>
 
 
 				<section>
@@ -148,22 +187,6 @@
                     </div>
                 </section>
 
-                <section>
-                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
-                    <h2 style="margin-top:-25px;margin-bottom:0;">System Identification</h2>
-                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);height:80%;width:100%;font-size: 1.0em">
-                            <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
-                                <li class="fragment fade-up"><p>To get a model of this system, we would need to determine what the unknown plant transfer function is.</p></li>
-                                <li class="fragment fade-up"><p>We have some basic bounds on this system that can provide a first guess.</p></li>
-                                <li class="fragment fade-up"><p>We could use the tool location during cutting to help with an approximation for the external disturbance function (Torque is proportional to the distance from the axis of rotation).</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-			</div>
-		</div>
-
         <script src="lib/js/head.min.js"></script>
         
         <!-- Try to get jQuery from CDN, if not fall back to local version -->
@@ -187,7 +210,7 @@
                 // bouncing the down arrow when they first encounter a vertical slide
                 controlsTutorial: true,
 
-                //transition: 'none', // none/fade/slide/convex/concave/zoom
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
                 
                 // The "normal" size of the presentation, aspect ratio will be preserved
                 // when the presentation is scaled to fit different resolutions. Can be

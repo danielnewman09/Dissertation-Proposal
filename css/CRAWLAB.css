@@ -35,8 +35,16 @@ body {
   background-size: 10%;
   background-position: 99% 1%;
   background-repeat: no-repeat;
+
+    /* Add Fluer di Lis to the top right */
+    /* background-image: url('chevron.png');
+    background-size: 5%;
+    background-position: 1% 99%;
+    background-repeat: no-repeat; */
   }
  
+
+
 @media screen and (max-width:1000px){
     /* Scale Fleur de lis up to 10% of width for small screens */
     .reveal{
@@ -144,7 +152,7 @@ body {
   line-height: 1.2;
   letter-spacing: normal;
 /*   text-transform: uppercase; */
-  text-shadow: 4px 4px 4px #222;
+  text-shadow: 2px 2px 2px #222;
   word-wrap: break-word; }
 
 .reveal h1 {
