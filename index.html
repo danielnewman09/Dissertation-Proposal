@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="css/CRAWLAB.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/monokai.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -28,16 +28,14 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-		<script src="js/reveal.js"></script>
+		<!-- <script src="js/reveal.js"></script> -->
 
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 
-                <section data-background="#ffffff"> <!-- Title Slide -->
-                    <br>
+                <section> <!-- Title Slide -->
                     <br>
                     <h2 style="text-align:center;">Bayesian Edge Analytics of Manufacturing Process and Health Status in an IoT Framework</h2>
                     <p style="text-align: center;">
@@ -50,61 +48,176 @@
                  </p>
                 </section>
 
-				<section>
-                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                <section>
                     <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
-                    <div style="position: absolute; top: 95%; width: 40%; left: -15%; padding: 2px; text-align: left;">
-                    <h4>Motivation</h4>
+                    <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/Smart_Factory_Typical/Factory_Equipment.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Smart_Factory_Typical/Industrial_Network.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Smart_Factory_Typical/Cloud_Computing.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Smart_Factory_Typical/Monitoring_Application.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
                     </div>
-                    </div>
-	
                 </section>
 
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Central Thesis</h2>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+                    <div style="position:relative; width:1152px; height:864px; margin: 5% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/Equipment_Data_Streams/Factory_Equipment.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/FFT.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Motor_Health.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Position.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Part_Quality.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Loads.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Tool_Quality.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                    </div>
                 </section>
+
+
+                <section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                            <div class="fragment fade-up" data-fragment-index="1" style="display:inline-block;width:100%;position:relative;background: rgba(255, 255, 255, 1.0);border: 4px solid #000;-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);margin-top:2.5%;padding-top:2.5%;padding-bottom:2.5%;padding-left:0.0%;padding-right:0.0%;font-size:1.5em;">
+                                <b>Central Thesis:</b>
+                                <br>
+                                Develop an integrated data acquisition strategy which facilitates enterprise-level planning by performing edge statistical analysis on machine health and utilization data. 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+				<section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+						<div style="font-size: 1.0em">
+							<ul style="line-height:2.0;">
+								<li class="fragment fade-up">Retrieve high-quality machine and process data</li>
+                                <li class="fragment fade-up">Accommodate a range of machine types</li>
+                                <li class="fragment fade-up">Use modern, efficient IoT protocols</li>
+                                <li class="fragment fade-up">Facilitate enterprise-level machine utilization monitoring, part quality tracking, and machine maintenance scheduling</li>
+							</ul>
+						</div>
+                    </div>
+ 
+				</div>
+                </section>
+
+
+
 
 				<section>
 					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
 					<h2 style="margin-top:-25px;margin-bottom:0;">Outline</h2>
 					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
 						<div style="font-size: 1.0em">
-							<ul style="line-height:2.0;">
-								<!-- <li class="fragment fade-up">Input Shaping Background</li>
-
-								<li class="fragment fade-up">Dynamic Model</li>
+							<ul style="line-height:1.0;">
+								<li class="fragment fade-up">Background</li>
 								<ul>
-									<li class="fragment fade-up">Discrete Approximation
-									</li>
-									<li class="fragment fade-up">Linearization</li>
-									<li class="fragment fade-up">Modal Analysis</li>
-								</ul>
-
-								<li class="fragment fade-up">Concurrent Design Approach</li>
-								<li class="fragment fade-up">Simulated Results</li> -->
+                                    <li class="fragment fade-up">IoT Frameworks</li>
+                                    <li class="fragment fade-up">Wireless Sensor Devices</li>
+                                    <li class="fragment fade-up">CNC Communications Protocols</li>
+                                    <li class="fragment fade-up">Vibration Analytics</li>
+                                    <li class="fragment fade-up">Statistical Tools</li>
+                                </ul>
+                                <li class="fragment fade-up">Research Opportunities</li>
+                                <li class="fragment fade-up">Proposed Activities</li>
+                                <li class="fragment fade-up">Work Completed</li>
 							</ul>
 						</div>
-					</div>
+                    </div>
+ 
 				</div>
                 </section>
 
                 <section>
-                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
-                                <h2 style="margin-top:-25px;margin-bottom:0;">IoT Frameworks</h2>
-                                <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%">
-                                <div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;">
-                                
-                                <h3>Background</h3>
-                                </div>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">IoT Frameworks</h2>
+                            <img src="css/chevron.png" style="position:absolute;left:0%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 40%; left: 10%; padding: 0px; text-align: left;"><h3>Background</h3></div>
+                            
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">Wireless Sensor Devices</h2>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%">
+                            <div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;">
+                            
+                            <h3>Background</h3>
+                            </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">CNC Communication Protocols</h2>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%">
+                            <div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;">
+                            
+                            <h3>Background</h3>
+                            </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Vibration Analytics</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:1.0;">
+                                    <li class="fragment fade-up">Bearing Failure Characterization</li>
+                                    <li class="fragment fade-up">Time Domain Analytics</li>
+                                    <li class="fragment fade-up">Frequency Domain Analytics</li>
+                                    <li class="fragment fade-up">Spectral Kurtosis</li>
+                                    <li class="fragment fade-up">Amplitude Demodulation</li>
+                                </ul>
+                            </div>
                         </div>
+                        <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;"><h3>Background</h3></div> 
+                    </div>
                 </section>
 
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Background: Wireless Sensor Devices</h2>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Bearing Defect Frequencies</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                        $$\begin{aligned}f_{bpi} &= n \frac{S}{2} \left ( 1 + \frac{D}{d_p} \cos{\alpha} \right )\\
+                        f_{bpo} &= n \frac{S}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha} \right )\\
+                        f_{bs} &= \frac{S d_p}{2D} \left [ 1 - \left ( \frac{D}{d_p} \cos{\alpha} \right )^2 \right ]\\
+                        f_{ft} &= \frac{S}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha}\right )\end{aligned}$$
+                        </div>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 100%; left: -10%; padding: 0px; text-align: left;">
+                            <h3>Background: Statistical Tools</h3></div>
+                    </div>
                 </section>
 
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Background: Machine Monitoring</h2>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Statistical Tools</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:2.0;">
+                                    <li class="fragment fade-up">Bayes' Rule</li>
+                                    <li class="fragment fade-up">Clustering</li>
+                                    <li class="fragment fade-up">Kalman Filtering</li>
+                                    <li class="fragment fade-up">Dimensionality Reduction</li>
+                                    <li class="fragment fade-up">Control Charts</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 40%; left: -10%; padding: 0px; text-align: left;"><h3>Background</h3></div> 
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Bayes' Rule</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                        $P(A | B) = \dfrac{P(B|A) P(A)}{P(B)}$
+                        </div>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 100%; left: -10%; padding: 0px; text-align: left;">
+                            <h3>Background: Statistical Tools</h3></div>
+                    </div>
                 </section>
 
                 <section>
@@ -119,89 +232,101 @@
                     <h2 style="margin-top:-25px;margin-bottom:0;">Work Accomplished</h2>
                 </section>
 
-
-				<section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Genos X Coordinate Model</h2>
-                    <span class="fragment" data-fragment-index="0"></span>
-
-                    <div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
-                        $$
-                        \ddot{x} = \frac{1}{m} \left ( -F_g - \beta_x \dot{x} + B_{x} u_{x} + F_{x} \right )
-                        $$
-                    </div>
-                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,50%);height:80%;width:100%;font-size: 1.0em">
-                        <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
-                            <li class="fragment fade-up"><p>$m$ - Mass of the turret</p></li>
-                            <li class="fragment fade-up"><p>$F_{g}$ - Force induced by gravity</p></li>
-                            <li class="fragment fade-up"><p>$\beta_{x}$ - Drag coefficient</p></li>                            
-                            <li class="fragment fade-up"><p>$B_{x}$ - Converts input (Current) to Force</p></li>
-                            <li class="fragment fade-up"><p>$u_{x}$ - Current input to the spindle motor</p></li>
-                            <li class="fragment fade-up"><p>$F_{x}$ - Cutting force in the radial direction</p></li>
-                        </ul>
-                    </div>	
-                </section>
-
-				<section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Genos Z Coordinate Model</h2>
-                    <span class="fragment" data-fragment-index="0"></span>
-
-                    <div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
-                        $$
-                        \ddot{z} = \frac{1}{m} \left ( -\beta_z \dot{z} +  B_{z} u_{z} + F_{z} \right )
-                        $$
-                    </div>
-                    <div style="position: absolute;top: 55%; left: 50%;transform: translate(-50%,50%);height:80%;width:100%;font-size: 1.0em">
-                        <ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;">
-                            <li class="fragment fade-up"><p>$m$ - Mass of the turret</p></li>
-                            <li class="fragment fade-up"><p>$\beta_{z}$ - Drag coefficient</p></li>
-                            <li class="fragment fade-up"><p>$B_{z}$ - Converts input (Current) to Force</p></li>
-                            <li class="fragment fade-up"><p>$u_{z}$ - Current input to the spindle motor</p></li>
-                            <li class="fragment fade-up"><p>$F_{z}$ - Cutting force in the axial direction</p></li>
-                        </ul>
-                    </div>	
-                </section>
-   
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">System Comparison</h2>
-                    <div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
-                        <img class="fragment fade-in" src="figures/Motor-Pump/Base.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
-                        <span class="fragment fade-in"><img class="plain fragment fade-out" src="figures/Motor-Pump/Pump-Layer.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%"></span>
-                        <img class="plain fragment fade-in" src="figures/Motor-Pump/Spindle-Layer.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Prototype Sensor Kit</h2>
+                    <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/SensorPack/Sensors.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                        <img class="plain fragment fade-in" src="figures/SensorPack/Microcontroller.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/SensorPack/Beaglebone.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+                        <img class="plain fragment fade-in" src="figures/SensorPack/MQTT.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
                     </div>
                 </section>
 
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">System Block Diagram</h2>
-                    <div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
-                        <img src="figures/Motor-Pump-BlockDiag.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
-                    </div>
-                    <div style="position:absolute;left:0px;top:50%;">
-                        <ul>
-                            <li class="fragment fade-up">$R$ - Reference given by user input</li>
-							<li class="fragment fade-up">$C$ - Controller which gives known output $U$</li>
-							<li class="fragment fade-up">$M,P,S$ - Unknown Plant (Motor, Pulley, Spindle)</li>
-                            <li class="fragment fade-up">$D$ - External disturbance due to cutting</li>
-                            <li class="fragment fade-up">$Y$ - Measured Output (Spindle Speed)</li>
-                        </ul>
-
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Accelerometer Data Acquisition</h2>
+                    <div style="position:relative; width:1280px; height:960px; margin: 7% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/Sample-Example.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
                     </div>
                 </section>
 
-        <script src="lib/js/head.min.js"></script>
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Microcontroller Flow Diagram</h2>
+                    <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/Teensy-Flow.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                    </div>
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Sensor Kit</h2>
+                    <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;">
+                        <img class="fragment fade-in" src="figures/SensorBox.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Sensor Kit</h2>
+                    <!-- <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;"> -->
+                        <pre><code class="hljs" data-line-numbers data-trim>
+                            {"dateTime":"2019-03-08T15:43:44.808Z",
+                            "assetId":"A1000",
+                            "dataItemId":"Vibration",
+                            "itemInstanceId": "Part_EPICS_1001",
+                            "sensorId": "accelerometer1",
+                            "samplingInterval":0.00048828125,
+                            "values":[0.895,0.889,...,0.877]}
+                        </code></pre>
+                    <!-- </div> -->
+                </section>
+
+                <section>
+                    <h2 style="margin-top:-25px;margin-bottom:0;">Sensor Kit</h2>
+                    <!-- <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;"> -->
+                        <pre><code class="hljs" data-line-numbers data-trim>
+                            {"dateTime":"2019-08-20T11:23:35.704Z",
+                            "assetId":"Okuma-Genos-3",
+                            "dataItemId":"LS1Speed",
+                            "value":"3024"}
+                    </code></pre>
+                    <!-- </div> -->
+                </section>
+                <section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-line-numbers data-trim>
+                        import React, { useState } from 'react';
+                         
+                        function Example() {
+                          const [count, setCount] = useState(0);
+                         
+                          return (
+                            <div>
+                              <p>You clicked {count} times</p>
+                              <button onClick={() => setCount(count + 1)}>
+                                Click me
+                              </button>
+                            </div>
+                          );
+                        }
+                        </code></pre>
+                    </section>
+
+        <!-- <script src="lib/js/head.min.js"></script> -->
         
+        <script src="js/reveal.js"></script>
+
         <!-- Try to get jQuery from CDN, if not fall back to local version -->
-        <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.8.0.min.js"><\/script>')</script>
-        
+         -->
         <!-- Try to get jQuery UI from CDN, if not fall back to local version -->
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-        <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+        <!-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script> -->
 
         <script>
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-                controls: true,
+                controls: false,
                 progress: true,
                 history: true,
                 center: false,
@@ -210,7 +335,7 @@
                 // bouncing the down arrow when they first encounter a vertical slide
                 controlsTutorial: true,
 
-                transition: 'convex', // none/fade/slide/convex/concave/zoom
+                transition: 'none', // none/fade/slide/convex/concave/zoom
                 
                 // The "normal" size of the presentation, aspect ratio will be preserved
                 // when the presentation is scaled to fit different resolutions. Can be
@@ -232,7 +357,7 @@
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/highlight/highlight.js', async: true},
                     { src: 'plugin/zoom-js/zoom.js', async: true },
                     { src: 'plugin/math/math.js', async: true },
                     { src: 'plugin/notes/notes.js', async: true }
