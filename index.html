@@ -48,9 +48,23 @@
                  </p>
                 </section>
 
+				<section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Introduction</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:2.0;">
+                                    <li class="fragment fade-up">Transition to Industry 4.0 and IoT</li>
+                                </ul>
+                            </div>
+                        </div>
+     
+                    </div>
+                    </section>
+
                 <section>
                     <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
-                    <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                    <div style="position:relative; width:1152px; height:864px; justify-content: center;">
                         <img class="fragment fade-in" src="figures/Smart_Factory_Typical/Factory_Equipment.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
                         <img class="plain fragment fade-in" src="figures/Smart_Factory_Typical/Industrial_Network.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
                         <img class="plain fragment fade-in" src="figures/Smart_Factory_Typical/Cloud_Computing.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
@@ -59,8 +73,8 @@
                 </section>
 
                 <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
-                    <div style="position:relative; width:1152px; height:864px; margin: 5% auto;justify-content: center;">
+                    <h2 style="margin-top:-25px;margin-bottom:5%;">Motivation</h2>
+                    <div style="position:relative; width:1152px; height:864px;justify-content: center;">
                         <img class="fragment fade-in" src="figures/Equipment_Data_Streams/Factory_Equipment.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
                         <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/FFT.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
                         <img class="plain fragment fade-in" src="figures/Equipment_Data_Streams/Motor_Health.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
@@ -98,11 +112,28 @@
 							</ul>
 						</div>
                     </div>
- 
-				</div>
+				    </div>
                 </section>
 
-
+				<section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Challenges</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:2.0;">
+                                    <li class="fragment fade-up">High-dimensional data from multiple sources</li>
+                                    <ul>
+                                        <li class="fragment fade-up">Accelerometers: >10kHz sampling rate</li>
+                                        <li class="fragment fade-up">Controller data: ~100Hz sampling rate for multiple axes</li>
+                                    </ul>
+                                    <li class="fragment fade-up">Lack of information surrounding the nature of fault conditions</li>
+                                    <li class="fragment fade-up">Production-critical machines: prognostic algorithms should be interpretable</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+    
 
 
 				<section>
@@ -178,18 +209,336 @@
                 </section>
 
                 <section>
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Research Opportunities</h2>
+                    </section>
+    
+                    <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">Proposed Activities</h2>
+                            <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                                <div style="font-size: 1.0em">
+                                    <ol style="line-height:1.0;">
+                                        <li class="fragment fade-up">Development of statistically-based machine monitoring algorithms</li>
+                                        <ul>
+                                            <li class="fragment fade-up">IoT-optimized bearing analytics</li>
+                                            <li class="fragment fade-up">Machine utilization and anomaly detection</li>
+                                        </ul>
+                                        <li class="fragment fade-up">Extension of an IoT architecture for manufacturing machine monitoring</li>
+                                        <li class="fragment fade-up">Development of a modular IoT edge device for integrated data acquisition</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+
+
+                <section>
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Bearing Characteristics</h2>
+                        <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                            <img  src="figures/Bearing.png" style="width:100%;">
+                            <div style="font-size: 1.0em">
+                                    <ul style="line-height:2.0;">
+                                        <li class="fragment fade-up">$n$ - number of rolling elements</li>
+                                        <li class="fragment fade-up">$\beta$ - contact angle</li>
+                                        </ul>
+                                    </div>
+                        </div>
+                </section>
+    
+                <section>
                     <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
                         <h2 style="margin-top:-25px;margin-bottom:0;">Bearing Defect Frequencies</h2>
                         <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
-                        $$\begin{aligned}f_{bpi} &= n \frac{S}{2} \left ( 1 + \frac{D}{d_p} \cos{\alpha} \right )\\
-                        f_{bpo} &= n \frac{S}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha} \right )\\
-                        f_{bs} &= \frac{S d_p}{2D} \left [ 1 - \left ( \frac{D}{d_p} \cos{\alpha} \right )^2 \right ]\\
-                        f_{ft} &= \frac{S}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha}\right )\end{aligned}$$
+                        $$\begin{aligned}f_{bpi} &= n \frac{\mbox{RPM}}{2} \left ( 1 + \frac{D}{d_p} \cos{\alpha} \right )\\
+                        f_{bpo} &= n \frac{\mbox{RPM}}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha} \right )\\
+                        f_{bs} &= \mbox{RPM} \frac{d_p}{2D} \left [ 1 - \left ( \frac{D}{d_p} \cos{\alpha} \right )^2 \right ]\\
+                        f_{ft} &= \frac{\mbox{RPM}}{2} \left ( 1 - \frac{D}{d_p} \cos{\alpha}\right )\end{aligned}$$
                         </div>
-                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 100%; left: -10%; padding: 0px; text-align: left;">
-                            <h3>Background: Statistical Tools</h3></div>
                     </div>
                 </section>
+
+                <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">Bearing Analytics</h2>
+                            <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">    
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:1.0;">
+                                    <li class="fragment fade-up">Vibration data are commonly used to assess bearing health</li>
+                                    <li class="fragment fade-up">Many metrics have been used for bearing prognostics and diagnostics</li>
+                                    <ul>
+                                        <li class="fragment fade-up">Root Mean Square</li>
+                                        <li class="fragment fade-up">Kurtosis</li>
+                                        <li class="fragment fade-up">Fourier Transform</li>
+                                        <li class="fragment fade-up">Spectral Kurtosis</li>
+                                    </ul>
+                                    <li class="fragment fade-up">It is impractical to predict remaining useful life prior to defect detection</li>
+                                    <li class="fragment fade-up">Defect detection should occur as soon as possible so preventative action can be taken</li>
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                            <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                                <h2 style="margin-top:-25px;margin-bottom:0;">Bearing Analytics: IoT</h2>
+                                <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">    
+                                <div style="font-size: 1.0em">
+                                    <ul style="line-height:1.0;">
+                                        <li class="fragment fade-up">For repeatibility, operating conditions should be nearly identical between samples</li>
+                                        <li class="fragment fade-up">Large data samples are generally required for prognostics (one second of 16-bit data sampled at 10kHz is 20KB)</li>
+                                        <li class="fragment fade-up">These raw data are not "information-dense"</li>
+                                        <li class="fragment fade-up">Edge analytics should be performed to maximize the prognostic information relative to data size</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+    
+                    <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">Dimensionality Reduction</h2>
+                            <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">  
+                            <img  src="figures/Dimensionality_Reduction.png" style="width:100%;">  
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:1.0;">
+                                    <li class="fragment fade-up">Machine Learning Methods:</li>
+                                    <ul>
+                                        <li class="fragment fade-up">Principal Components Analysis (PCA)</li>
+                                        <li class="fragment fade-up">Autoencoders</li>
+                                    </ul>
+                                    <li class="fragment fade-up">Can the nature of bearing vibration be exploited to facilitate these methods?</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Mixture Modeling</h2>
+                            <div style="position:relative; width:1152px; height:864px; margin: -2% auto;justify-content: center;">
+                                <img class="fragment fade-in" data-fragment-index="1" src="figures/Mixture_Model/Scatter.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%"> 
+                                <img class="plain fragment fade-in" data-fragment-index="3" src="figures/Mixture_Model/Density.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%"> 
+                                <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-20%);width:100%;">    
+                                    <div style="font-size: 1.0em">
+                                    <ul style="line-height:1.0;">
+                                        <li class="fragment fade-up" data-fragment-index="2">Statistical technique used to approximate the density function of a dataset</li>
+                                        <li class="fragment fade-up" data-fragment-index="4">If data are "labeled," different classes can be delineated</li>
+                                        <li class="fragment fade-up" data-fragment-index="5">Can frequency-domain data be projected onto a mixture model to detect changes in vibration?</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section>
+                                <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                                    <h2 style="margin-top:-25px;margin-bottom:0;">Machine Utilization and Anomaly Detection</h2>
+                                    <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">    
+                                    <div style="font-size: 1.0em">
+                                        <ul style="line-height:1.0;">
+                                            <li class="fragment fade-up">Communication Protocols</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+    
+                        <section>
+                                <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                                    <h2 style="margin-top:-25px;margin-bottom:0;">Machine Utilization and Anomaly Detection</h2>
+                                    <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">    
+                                    <div style="font-size: 1.0em">
+                                        <ul style="line-height:1.0;">
+                                            <li class="fragment fade-up">Assumptions</li>
+                                            <li class="fragment fade-up">Manufacturing equipment uses a finite number of "recipes"</li>
+                                            <li class="fragment fade-up">It is possible to express </li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+
+                    <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">An Example: Autoclaves</h2>
+                            <img  src="figures/Autoclave.png" style="width:30%;">  
+                            <!-- <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">     -->
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:1.0;">
+                                    <li class="fragment fade-up">Distinct process parameters include:</li>
+                                    <ul>
+                                        <li class="fragment fade-up">Composite makeup (thickness, material, etc.)</li>
+                                        <li class="fragment fade-up">Number of components</li>
+                                        <li class="fragment fade-up">Cure duration</li>
+                                        <li class="fragment fade-up">Cure temperature</li>
+                                        <li class="fragment fade-up">Cure pressure</li>
+                                    </ul>
+                                </ul>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Autoclave Example</h2>
+                        <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;">
+                            <img src="figures/Autoclave/Autoclave_Example.png" style="vertical-align:middle;border:0;width:80%">
+                        </div>
+                    </section>
+
+                    <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                            <h2 style="margin-top:-25px;margin-bottom:0;">Autoclave Example</h2> 
+                            <!-- <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">     -->
+                            <div style="font-size: 1.0em">
+                                <ul style="line-height:1.0;">
+                                    <li class="fragment fade-up">Possible events and parameters include:</li>
+                                    <ul>
+                                        <li class="fragment fade-up">Unscheduled downtime due to alarms</li>
+                                        <li class="fragment fade-up">Part heat capacity</li>
+                                        <li class="fragment fade-up">uncertainty/variance in the process</li>
+                                        <li class="fragment fade-up">Utilization (how full the autoclave is on each cycle)</li>
+                                    </ul>
+                                </ul>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </section>
+
+                        <section>
+                                <h2 style="margin-top:-25px;margin-bottom:0;">IoT Architecture Extension</h2>
+                                <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;">
+                                    <img src="figures/Controller-Sensor-Old.png" style="vertical-align:middle;border:0;width:80%">
+                                </div>
+                        </section>
+        
+                        <section>
+                                <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                                    <h2 style="margin-top:-25px;margin-bottom:0;">IoT Architecture Drawbacks</h2>
+                                    <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                                        <div style="font-size: 1.0em">
+                                            <ul style="line-height:1.0;">
+                                                <li class="fragment fade-up">Sensor data are not synchronized with controller data</li>
+                                                <li class="fragment fade-up">Difficult to request sensor data at a certain point in process</li>
+                                                <li class="fragment fade-up">Limited by microcontroller processing power for edge analytics</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+        
+                        <section>
+                                <h2 style="margin-top:-25px;margin-bottom:0;">IoT Architecture Extension</h2>
+                                <div style="position:relative; width:1152px; height:864px; margin: 0% auto;justify-content: center;">
+                                    <img src="figures/Controller-Sensor-New.png" style="vertical-align:middle;border:0;width:80%">
+                                </div>
+                        </section>
+
+                    <section>
+                        <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Root Mean Square</h2>
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+                        $$\mbox{RMS} = \sqrt{\dfrac{1}{n}\sum_{i=1}^{n}x^2_i}
+                        $$
+                        <div style="font-size: 1.0em">
+                            <ul style="line-height:2.0;">
+                                <li class="fragment fade-up">Provides information on intensity of vibration</li>
+                                <li class="fragment fade-up">As a bearing nears the end of its life, RMS value rapidly increases</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                </section>
+
+                <section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Root Mean Square</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+						<img  src="figures/Bearing_Failure/filtered_RMS.png" style="width:100%;">
+				</div>
+				</section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Kurtosis</h2>
+
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+
+                        $$\mbox{Kurt} = \dfrac{\dfrac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^4}{\left ( \dfrac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^2 \right )^2} - 3
+                        $$
+
+                        <div style="font-size: 1.0em">
+                            <ul style="line-height:2.0;">
+                                <li class="fragment fade-up">Provides information on impulsivity of vibration</li>
+                                <li class="fragment fade-up">As a signal degrades, its kurtosis increases.</li>
+                                <li class="fragment fade-up">A perfectly Gaussian signal will have a kurtosis of zero.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Spectral Kurtosis</h2>
+
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+
+                        <div style="font-size: 1.0em">
+                            <ul style="line-height:2.0;">
+                                <li class="fragment fade-up">When a bearing defect manifests, it may cause amplitude modulation at very high frequencies.</li>
+                                <li class="fragment fade-up">By analyzing the signal kurtosis at specific frequencies, it is possible to determine the bands in which this modulation occurs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 100%; left: -10%; padding: 0px; text-align: left;">
+                            <h3>Background: Bearing Failure</h3></div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+                        <h2 style="margin-top:-25px;margin-bottom:0;">Amplitude Demodulation</h2>
+
+                        <div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+
+                        <div style="font-size: 1.0em">
+                            <ul style="line-height:1.5;">
+                                <li class="fragment fade-up">This is a signal processing technique by which a highly modulated signal may be manipulated to reveal an underlying defect.</li>
+                                <li class="fragment fade-up">The steps are as follows:</li>
+                                <ol>
+                                    <li class="fragment fade-up">Filter the signal about the modulating frequencies with a band-pass filter</li>
+                                    <li class="fragment fade-up">Rectify the filtered signal</li>
+                                    <li class="fragment fade-up">Use a low-pass filter to recover an envelope of the resulting signal</li>
+                                </ol>
+                                </ul>
+                            </div>
+                        </div>
+                            <img src="css/chevron.png" style="position:absolute;left:-20%;top:80%;width:10%"><div style="position: absolute; top: 93%; width: 100%; left: -10%; padding: 0px; text-align: left;">
+                            <h3>Background: Bearing Failure</h3></div>
+                    </div>
+                </section>
+
+                <section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Amplitude Demodulation</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+                        <img  src="figures/Bearing_Failure/Accel_example.png" style="width:100%;">
+                        <img  src="figures/Bearing_Failure/FFT_Accel_example.png" style="width:100%;">
+					</div>
+				</div>
+                </section>
+                
+                <section>
+                <h2 style="margin-top:-25px;margin-bottom:0;">Amplitude Demodulation</h2>
+				<div style="position:relative; width:1152px; height:864px; margin: 2% auto;justify-content: center;">
+                        <img  src="figures/Bearing_Failure/Fast_Kurtogram.png" style="width:100%;">
+				</div>
+				</section>
+
 
                 <section>
                     <div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
@@ -220,13 +569,7 @@
                     </div>
                 </section>
 
-                <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Research Opportunities</h2>
-                </section>
 
-                <section>
-                    <h2 style="margin-top:-25px;margin-bottom:0;">Proposed Activities</h2>
-                </section>
 
                 <section>
                     <h2 style="margin-top:-25px;margin-bottom:0;">Work Accomplished</h2>
@@ -349,6 +692,8 @@
                 // Bounds for smallest/largest possible scale to apply to content
                 minScale: 0.2,
                 maxScale: 1.5,
+
+                pdfSeparateFragments: false,
 
                 slideNumber: 'c/t',
 
